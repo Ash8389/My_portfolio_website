@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-mono antialiased overflow-x-hidden select-text;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0, "clig" 0, "calt" 0;
+  }
+}
+
+/* Custom Scrollbar for Terminal Terminal Body */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.6);
+}
+
+/* Custom Theme Overrides */
+.theme-amber .text-emerald-400 {
+  color: #f59e0b !important;
+}
+
+.theme-amber .text-emerald-300 {
+  color: #fbbf24 !important;
+}
+
+.theme-amber .border-emerald-500\/30,
+.theme-amber .border-emerald-500\/40,
+.theme-amber .border-emerald-500\/50 {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+.theme-amber .bg-emerald-500\/20,
+.theme-amber .bg-emerald-500\/10 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+.theme-matrix .text-emerald-400 {
+  color: #22c55e !important;
+}
+
+.theme-matrix .text-cyan-400 {
+  color: #4ade80 !important;
+}
+
+.theme-dracula .text-emerald-400 {
+  color: #c084fc !important;
+}
+
+.theme-dracula .text-cyan-400 {
+  color: #f472b6 !important;
+}
