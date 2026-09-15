@@ -1,4 +1,5 @@
 export const EXPERIENCE = [
+  /*
   {
     id: "01",
     role: "Software Development Intern",
@@ -12,4 +13,5 @@ export const EXPERIENCE = [
       "Integrated RESTful API services with React components for responsive UI state updates."
     ]
   }
+  */
 ];

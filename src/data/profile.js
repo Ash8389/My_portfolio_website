@@ -23,11 +23,13 @@ export const PROFILE = {
     period: "2022–2026"
   },
 
+  /*
   experience: {
     role: "Software Development Intern",
-    company: "FixFin Technologies",
-    period: "Internship"
+    company: "Tech Application Development",
+    period: "2024"
   },
+  */
 
   focus: [
     "Java 21",
@@ -95,10 +97,12 @@ export const PROFILE = {
       label: "EDUCATION",
       content: "B.Tech in Computer Science & Engineering — Geeta University (2022–2026)"
     },
+    /*
     {
       label: "EXPERIENCE",
-      content: "Software Development Intern — FixFin Technologies"
+      content: "Software Development Intern — Tech Application Development"
     },
+    */
     {
       label: "PRIMARY ENGINEERING FOCUS",
       content: "Java 21 • Spring Boot 3 • Microservices • Distributed Systems • REST APIs • Apache Kafka • Redis • MySQL • System Design"

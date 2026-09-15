@@ -84,7 +84,7 @@ export const VIRTUAL_FILESYSTEM = {
             { label: "NAME", value: personalInfo.name },
             { label: "ROLE", value: `${PROFILE.title} (${PROFILE.subtitle})` },
             { label: "EDUCATION", value: `${PROFILE.education.degree} — ${PROFILE.education.institution} (${PROFILE.education.period})` },
-            { label: "EXPERIENCE", value: `${PROFILE.experience.role} — ${PROFILE.experience.company}` },
+            ...(PROFILE.experience ? [{ label: "EXPERIENCE", value: `${PROFILE.experience.role} — ${PROFILE.experience.company}` }] : []),
             { label: "PRIMARY STACK", value: `${PROFILE.focus.join(" • ")} • ${PROFILE.engineering.join(" • ")}` },
             { label: "LEARNING & EXPLORATION", value: PROFILE.aboutSections.find(s => s.label === "LEARNING & EXPLORATION")?.content },
             { label: "PROBLEM SOLVING", value: PROFILE.aboutSections.find(s => s.label === "PROBLEM SOLVING")?.content },

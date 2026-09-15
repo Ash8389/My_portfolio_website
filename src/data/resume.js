@@ -23,15 +23,18 @@ export const resumeData = {
   ],
 
   experience: [
+    /*
     {
-      company: "FixFin Technologies",
+      company: "Tech Application Development",
       role: "Software Development Intern",
-      period: "June 2024–August 2024",
+      period: "2024",
       highlights: [
-        "Built and optimized backend microservices using Java 21 and Spring Boot.",
-        "Integrated high-speed Redis caching and REST API interfaces for financial workflows."
+        "Collaborated with cross-functional development teams to build user-facing application features.",
+        "Engineered optimized SQL relational database queries for high-performance data retrieval.",
+        "Integrated RESTful API services with React components for responsive UI state updates."
       ]
     }
+    */
   ],
 
   projects: [

@@ -121,12 +121,14 @@ export const coreCommands = {
               </div>
             </div>
 
-            <div>
-              <div className="text-slate-400 font-bold">Experience</div>
-              <div className="text-slate-300 pl-2">
-                {PROFILE.experience.role} · {PROFILE.experience.company}
+            {PROFILE.experience && (
+              <div>
+                <div className="text-slate-400 font-bold">Experience</div>
+                <div className="text-slate-300 pl-2">
+                  {PROFILE.experience.role} · {PROFILE.experience.company}
+                </div>
               </div>
-            </div>
+            )}
 
             <div>
               <div className="text-slate-400 font-bold">Learning & Exploration</div>
@@ -171,13 +173,15 @@ export const coreCommands = {
               </div>
             </div>
 
-            <div>
-              <div className="text-cyan-400 font-bold uppercase tracking-wider mb-1">EXPERIENCE</div>
-              <div className="text-slate-200 pl-2">
-                <div className="text-emerald-400 font-bold">{PROFILE.experience.role}</div>
-                <div className="text-slate-300">{PROFILE.experience.company}</div>
+            {PROFILE.experience && (
+              <div>
+                <div className="text-cyan-400 font-bold uppercase tracking-wider mb-1">EXPERIENCE</div>
+                <div className="text-slate-200 pl-2">
+                  <div className="text-emerald-400 font-bold">{PROFILE.experience.role}</div>
+                  <div className="text-slate-300">{PROFILE.experience.company}</div>
+                </div>
               </div>
-            </div>
+            )}
 
             <div>
               <div className="text-cyan-400 font-bold uppercase tracking-wider mb-1">PRIMARY ENGINEERING FOCUS</div>

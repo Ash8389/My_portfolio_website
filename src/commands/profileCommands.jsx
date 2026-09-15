@@ -19,30 +19,36 @@ export const profileCommands = {
           <TerminalHeader title="PROFESSIONAL EXPERIENCE" />
 
           <div className="space-y-3">
-            {EXPERIENCE.map((exp) => (
-              <div key={exp.id} className="space-y-1.5 border-b border-slate-800 pb-3">
-                <div className="flex flex-wrap items-center justify-between gap-2">
-                  <div className="text-emerald-400 font-bold text-base font-mono">
-                    [{exp.id}] {exp.role}
+            {EXPERIENCE && EXPERIENCE.length > 0 ? (
+              EXPERIENCE.map((exp) => (
+                <div key={exp.id} className="space-y-1.5 border-b border-slate-800 pb-3">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="text-emerald-400 font-bold text-base font-mono">
+                      [{exp.id}] {exp.role}
+                    </div>
+                    <span className="text-xs text-slate-400 font-mono">({exp.period})</span>
                   </div>
-                  <span className="text-xs text-slate-400 font-mono">({exp.period})</span>
-                </div>
-                <div className="text-cyan-400 text-xs font-semibold">{exp.company}</div>
-                
-                <div className="text-xs text-slate-300 pt-1">
-                  <span className="text-slate-400 font-bold">TECHNOLOGIES:</span> {exp.technologies.join(" • ")}
-                </div>
+                  <div className="text-cyan-400 text-xs font-semibold">{exp.company}</div>
+                  
+                  <div className="text-xs text-slate-300 pt-1">
+                    <span className="text-slate-400 font-bold">TECHNOLOGIES:</span> {exp.technologies.join(" • ")}
+                  </div>
 
-                <div className="text-xs text-slate-300">
-                  <span className="text-slate-400 font-bold">ENVIRONMENT:</span> {exp.environment}
-                </div>
+                  <div className="text-xs text-slate-300">
+                    <span className="text-slate-400 font-bold">ENVIRONMENT:</span> {exp.environment}
+                  </div>
 
-                <div>
-                  <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mt-1">CONTRIBUTIONS:</div>
-                  <TerminalListOutput items={exp.contributions} />
+                  <div>
+                    <div className="text-xs text-slate-400 font-bold uppercase tracking-wider mt-1">CONTRIBUTIONS:</div>
+                    <TerminalListOutput items={exp.contributions} />
+                  </div>
                 </div>
+              ))
+            ) : (
+              <div className="text-slate-400 text-xs py-1">
+                No professional experience listed at this time.
               </div>
-            ))}
+            )}
           </div>
         </div>
       )

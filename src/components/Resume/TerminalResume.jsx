@@ -55,24 +55,26 @@ export default function TerminalResume() {
       </div>
 
       {/* 4. EXPERIENCE */}
-      <div className="space-y-2">
-        <div className="text-cyan-400 font-bold text-xs uppercase tracking-wider">EXPERIENCE</div>
-        <div className="pl-2 space-y-2 text-xs">
-          {experience.map((exp, idx) => (
-            <div key={idx} className="space-y-1 border-l-2 border-emerald-500/30 pl-3">
-              <div className="flex flex-wrap items-center justify-between text-slate-100 font-bold">
-                <span>{exp.company} — <span className="text-emerald-300 font-semibold">{exp.role}</span></span>
-                <span className="text-slate-400 font-normal">({exp.period})</span>
+      {experience && experience.length > 0 && (
+        <div className="space-y-2">
+          <div className="text-cyan-400 font-bold text-xs uppercase tracking-wider">EXPERIENCE</div>
+          <div className="pl-2 space-y-2 text-xs">
+            {experience.map((exp, idx) => (
+              <div key={idx} className="space-y-1 border-l-2 border-emerald-500/30 pl-3">
+                <div className="flex flex-wrap items-center justify-between text-slate-100 font-bold">
+                  <span>{exp.company} — <span className="text-emerald-300 font-semibold">{exp.role}</span></span>
+                  <span className="text-slate-400 font-normal">({exp.period})</span>
+                </div>
+                <ul className="list-disc list-inside text-slate-300 space-y-0.5 pt-0.5">
+                  {exp.highlights.map((h, i) => (
+                    <li key={i} className="leading-relaxed">{h}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="list-disc list-inside text-slate-300 space-y-0.5 pt-0.5">
-                {exp.highlights.map((h, i) => (
-                  <li key={i} className="leading-relaxed">{h}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 5. PROJECTS */}
       <div className="space-y-3">
